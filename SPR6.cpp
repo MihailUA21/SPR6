@@ -65,6 +65,12 @@ public:
 
 int main()
 {
-   
+    NetworkLevel network;
+    TelecommunicationLine* line = new TelecommunicationLine(150, true, 5, "Digital");
+    NetworkNode* node = new NetworkNode(300, false, 8);
+    network.addComponents(line); network.addComponents(node);
+
+    network.getInfo();
+    return 0;
 }
 
